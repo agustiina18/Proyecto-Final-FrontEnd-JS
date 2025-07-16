@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Life</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="usuario-barra">
+  <div class="usuario-info">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Usuario" class="icono-usuario" />
+    <span>
+      ¡Hola! <a href="#" id="btn-iniciar">Iniciá sesión</a> / <a href="#" id="btn-registrar">Registrate</a>
+    </span>
+  </div>
+  <div class="carrito-info">
+    <a href="#carrito">
+      <img src="https://previews.123rf.com/images/grgroup/grgroup1611/grgroup161112329/66634646-silhouette-monochrome-with-shopping-cart-vector-illustration.jpg" alt="Carrito" class="icono-carrito" />
+      <span>Carrito (<span id="contador-carrito">0</span>)</span>
+    </a>
+  </div>
+</div>
+
+  <header>
+    <h1>Fitness Life</h1>
+  </header>
+
+  <nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+  </ul>
+</nav>
+
+  <div class="buscador-container">
+  <input type="text" id="buscador" placeholder="¿Qué estás buscando?" />
+  <button onclick="buscarProducto()">Buscar</button>
+</div>
+
+  <main>
+
+    <section id="inicio">
+        <p>
+    Tu tienda online de suplementos deportivos de confianza.</p>
+  <iframe width="400" height="225"
+    src="https://www.youtube.com/embed/FhD9ElhsjQg"
+    title="Video sobre suplementos"
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</section>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <div id="lista-productos" class="productos-lista"></div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <div id="lista-carrito"></div>
+        <p>Total: $<span id="total">0</span></p>
+        <button onclick="finalizarCompra()">Finalizar compra</button>
+    </section>
+
+    <section id="ofertas">
+      <h2>Promociones</h2>
+      <p>¡20% de descuento en todos los combos este mes!</p>
+    </section>
+
+    <section id="resenas">
+        <h2>Reseñas de Clientes</h2>
+        <div class="grid-resenas">
+          <article>
+            <p>"Excelente calidad y envío rápido."</p>
+            <strong>- Ana G.</strong>
+          </article>
+          <article>
+            <p>"Me ayudaron a alcanzar mis objetivos."</p>
+            <strong>- Luis M.</strong>
+          </article>
+          <article>
+            <p>"Muy recomendados para deportistas."</p>
+            <strong>- Carla R.</strong>
+          </article>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/mrbkgbzq" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+  
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+  
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+  
+          <div id="mensaje-formulario" role="alert" style="color: red; margin-top: 10px;"></div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      
+      <section id="preguntas-frecuentes">
+  <h2>Preguntas Frecuentes</h2>
+  
+  <div class="faq-item">
+    <h3>¿Cuáles son las formas de pago? / Formas de pago</h3>
+    <p>Disponemos de los siguientes medios de pago:</p>
+    <ul>
+      <li>Efectivo (solo para clientes de Buenos Aires).</li>
+      <li>Transferencia bancaria.</li>
+      <li>Tarjetas de crédito y débito a través de plataformas seguras.</li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Puedo cambiar el método de pago después de haber realizado el pedido?</h3>
+    <p>No es posible modificar el método de pago una vez que el pedido ha sido confirmado.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cuál es el costo de envío? / Costo de envío</h3>
+    <p>El costo de envío será mostrado en base al total de la compra y ubicación, en el checkout, en el momento previo a la compra.</p>
+  </div>
+
+  <div class="faq-item">
+  <h3>¿Cuáles son sus medios de envío?</h3>
+  <p>Trabajamos con:</p>
+  <div class="medios-envio">
+    <div class="envio-item">
+      <span>Andreani</span>
+    </div>
+    <div class="envio-item">
+      <span>Correo Argentino</span>
+    </div>
+  </div>
+</div>
+
+  <div class="faq-item">
+    <h3>¿Dónde puedo recibir mi pedido?</h3>
+    <p>Realizamos envíos a todo el país.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cuánto tarda en llegar el pedido?</h3>
+    <p>El tiempo de entrega dependerá del tipo de envío seleccionado. En general, la demora es de entre 3 y 5 días hábiles luego de acreditado el pago.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cuánto cuesta el envío?</h3>
+    <p>El costo del envío depende de tu ubicación y el peso del pedido. Puedes calcularlo al finalizar la compra.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Puedo rastrear mi pedido?</h3>
+    <p>Sí, una vez despachado tu pedido, recibirás un número de seguimiento para monitorear su estado.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Hacen envíos internacionales?</h3>
+    <p>Por el momento, solo realizamos envíos dentro de Argentina.</p>
+  </div>
+</section>
+
+      <section id="ubicacion">
+  <h2>Ubicación</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.055030431311!2d-58.42493858426127!3d-34.61381287973979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5e7fc50fdb%3A0xfb5e29438366ab56!2sAv.%20Rivadavia%204033%2C%20C1405%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1690012345678!5m2!1ses-419!2sar"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+  </main>
+
+  <section id="formulario-sesion">
+    <h2>Iniciar sesión o Registrarse</h2>
+    <form>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave" required>
+
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <p>¿No tenés cuenta? <a href="#">Registrate acá</a></p>
+</section>
+
+  <div class="redes-sociales">
+  <a href="https://wa.me/5491123456789" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  </a>
+  <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+  </a>
+  <a href="https://www.facebook.com/tu_usuario" target="_blank" aria-label="Facebook">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+  </a>
+</div>
+
+  <section id="medios-pago">
+  <h2>Medios de Pago</h2>
+  <div class="medios-icons">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" title="Visa" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" title="Mastercard" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Red_link_logo.svg" alt="Link" title="Link" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Logo_Naranja.png" alt="Tarjeta Naranja" title="Tarjeta Naranja" />
+    <img src="https://cdn.prod.website-files.com/64199d190fc7afa82666d89c/6491beebdb5a896d1fb7ba35_tarjeta_shopping.webp" alt="Tarjeta Shopping" title="Tarjeta Shopping" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Cencosud_logo.svg" alt="Cencosud" title="Cencosud" />
+    <img src="https://cdn.prod.website-files.com/64199d190fc7afa82666d89c/6491bee4af0750c3e596cd68_argencard.webp" alt="Argencard" title="Argencard" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/ProvinciaNetLOGO.png" alt="Provincianet" title="Provincianet" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Visa_Debit_SVG_logo.svg" alt="Visa Debit" title="Visa Debit" />
+    <img src="https://yt3.googleusercontent.com/XbdvVuLGf7FWh2zT39ytWDjPPAE0-aPu1xc69VcOgaT24Zwbf7F-bIPhRXAVzM3l6W5c7YbRhA=s900-c-k-c0x00ffffff-no-rj" alt="Pago Fácil" title="Pago Fácil" />
+    <img src="https://scontent.feze11-1.fna.fbcdn.net/v/t39.30808-6/465054848_8902198689804614_2221588595554658495_n.png?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=5f7fJMzjxNMQ7kNvwGTDQuz&_nc_oc=Adll7LRgbz1RXYDMFzPelAJ8APFzeNGi6oBExx_5r497drHfurqRuXkGsaI1p1clpWknHaMDZkRgXN4fA9nKWaVa&_nc_zt=23&_nc_ht=scontent.feze11-1.fna&_nc_gid=STJHA4PK-ucS9_eUdo0bZA&oh=00_AfR-FWsq_ka8eN45eTFVj8KMRl52_nWvSELnjj1GP_8HGA&oe=687DD8AC" alt="Rapipago" title="Rapipago" />
+  </div>
+</section>
+
+<section id="medios-envio">
+  <h3>Medios de Envío</h3>
+  <div class="envios-logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Correo_Argentino_Logo.svg" alt="Correo Argentino" />
+    <img src="https://www.producteca.com/wp-content/uploads/2020/02/andreani-1024x341.png" alt="Andreani" />
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 Fitness Life Suplementos - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
