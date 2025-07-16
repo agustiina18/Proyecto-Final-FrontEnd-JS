@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "titulo": "Citrato de Magnesio",
+    "precio": 10800,
+    "imagen": "https://dcdn-us.mitiendanube.com/stores/003/807/406/products/diseno-sin-titulo-2024-09-25t193913-206-585bd1de6fc19e4c7b17273039663271-640-0-removebg-preview-fb4702717da564605617506282379091-1024-1024.webp"
+  },
+  {
+    "id": 2,
+    "titulo": "Colageno Beauty bebible",
+    "precio": 20600,
+    "imagen": "https://dcdn-us.mitiendanube.com/stores/003/807/406/products/imagen1_vitamin_way_colageno_beauty_flex_polvo_imagen1-removebg-preview-08444707c4b21532af17506284152387-1024-1024.webp"
+  },
+  {
+    "id": 3,
+    "titulo": "BCAA + Glutamina",
+    "precio": 6800,
+    "imagen": "https://guatemala.saschafitness.com/cdn/shop/products/UVA-01.jpg?v=1666822583&width=823"
+  },
+  {
+    "id": 4,
+    "titulo": "Proteina Whey",
+    "precio": 9500,
+    "imagen": "https://dcdn-us.mitiendanube.com/stores/003/807/406/products/wepik-20231226164604hrop-8fba5371503fac827717052624173658-1024-1024.webp"
+  }
+]
+
+
